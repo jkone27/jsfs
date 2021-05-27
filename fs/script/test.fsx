@@ -7,7 +7,7 @@ type PetsApi = OpenApiClientProvider<"https://petstore.swagger.io/v2/swagger.jso
 
 let c = PetsApi.Client()
 
-let p = new PetsApi.Pet("pet1", [||], Some(1L), 
+let p = new PetsApi.Pet("fido", [||], Some(1L), 
     PetsApi.Category(Some(1L), "home"))
 
 c.AddPet(p).GetAwaiter().GetResult()
